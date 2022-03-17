@@ -24,7 +24,7 @@ Or in `development` mode:
 yarn dev # For running the code in development thanks to swc and nodemon
 ```
 
-> **/!\ No typechecking made in dev mode**
+> **:warning: No typechecking made in dev mode**
 
 ## Testing the code
 
