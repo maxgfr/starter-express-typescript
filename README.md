@@ -1,6 +1,6 @@
 # starter-express-typescript
 
-Boilerplate of an [express server](https://expressjs.com/) server with [TypeScript](https://www.typescriptlang.org/) using the concept of dependencies injection (inversion of control) thanks to [InversifyJS](https://github.com/inversify/InversifyJS). It uses the rust compiler [swc](https://swc.rs/) to compile the TypeScript code.
+Boilerplate of an [ExpressJS server](https://expressjs.com/) server with [TypeScript](https://www.typescriptlang.org/) using the concept of dependencies injection (inversion of control) thanks to [InversifyJS](https://github.com/inversify/InversifyJS). It uses the rust compiler [swc](https://swc.rs/) to compile the TypeScript code.
 
 ## Clone repository and install dependencies
 
