@@ -1,0 +1,4 @@
+build/
+.swc
+node_modules/
+*-error.log
