@@ -1,8 +1,8 @@
-import { BaseService } from '../base';
+import { IndexService } from '..';
 
-describe('BaseService', () => {
+describe('IndexService', () => {
   it('should return an ok status', () => {
-    const service = new BaseService();
+    const service = new IndexService();
 
     expect(service.get()).toEqual({ status: 'available' });
   });
