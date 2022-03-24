@@ -4,16 +4,16 @@ import './controllers';
 import bodyParser from 'body-parser';
 import { Container } from 'inversify';
 import { InversifyExpressServer } from 'inversify-express-utils';
-import type { NextFunction, Request, Response } from "express";
+import type { NextFunction, Request, Response } from 'express';
 
 import { IndexService } from './services';
 import { getName } from './utils';
 
-const container = new Container();
+const rootContainer = new Container();
 
-container.bind<IndexService>(getName(IndexService)).to(IndexService);
+rootContainer.bind<IndexService>(getName(IndexService)).to(IndexService);
 
-const server = new InversifyExpressServer(container);
+const server = new InversifyExpressServer(rootContainer);
 
 server.setConfig((srv) => {
   srv.use(
@@ -32,4 +32,4 @@ server.setErrorConfig((app) => {
 
 const app = server.build();
 
-export default app;
+export { app, rootContainer };
