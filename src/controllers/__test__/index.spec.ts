@@ -4,7 +4,7 @@ import { InversifyExpressServer } from 'inversify-express-utils';
 import request from 'supertest';
 import { IndexService } from '../../services';
 import { getName } from '../../utils';
-import { MockIndexService } from './mocks/index.test';
+import { MockIndexService } from './mocks';
 
 describe('IndexController', () => {
   let server: InversifyExpressServer;
