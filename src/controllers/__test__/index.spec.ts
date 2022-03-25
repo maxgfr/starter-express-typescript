@@ -12,7 +12,10 @@ describe('IndexController', () => {
 
   beforeEach((done) => {
     container = new Container();
-    container.bind<IndexService>(getName(IndexService)).to(MockIndexService);
+    container
+      .bind<IndexService>(getName(IndexService))
+      .to(MockIndexService)
+      .inSingletonScope();
     server = new InversifyExpressServer(container);
     done();
   });
