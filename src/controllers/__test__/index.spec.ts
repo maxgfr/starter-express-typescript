@@ -5,6 +5,8 @@ import request from 'supertest';
 import { IndexService } from '../../services';
 import { getName } from '../../utils';
 import { MockIndexService } from './mocks';
+import type { NextFunction, Request, Response } from 'express';
+import bodyParser from 'body-parser';
 
 describe('IndexController', () => {
   let server: InversifyExpressServer;
@@ -17,6 +19,23 @@ describe('IndexController', () => {
       .to(MockIndexService)
       .inSingletonScope();
     server = new InversifyExpressServer(container);
+    server.setConfig((srv) => {
+      // add body parser
+      srv.use(
+        bodyParser.urlencoded({
+          extended: true,
+        }),
+      );
+      srv.use(bodyParser.json());
+    });
+    server.setErrorConfig((app) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      app.use(
+        (err: Error, _req: Request, res: Response, _next: NextFunction) => {
+          res.status(500).json({ error: err.message });
+        },
+      );
+    });
     done();
   });
 
