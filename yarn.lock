@@ -2526,9 +2526,9 @@ inherits@2, inherits@2.0.4, inherits@^2.0.3:
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
 inversify-express-utils@^6.4.3:
-  version "6.4.10"
-  resolved "https://registry.yarnpkg.com/inversify-express-utils/-/inversify-express-utils-6.4.10.tgz#93963e4ca6682ec9be339b6b98492a845730c688"
-  integrity sha512-mCCLmeHKWP/SK5/iK9oPu1wdBEFyWHLQN4thh36uOxRzeAX6bQExl8l2utjEdl7DXGInHFXnUFaK7JkiJoJIAA==
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/inversify-express-utils/-/inversify-express-utils-6.5.0.tgz#c67f3ecc171cede84d2c9f69bc2a46ca6ca857d0"
+  integrity sha512-BJQGi/bZx8IrtvFpGI3TzvSrpMqSOMvqtmpl9or6sDSl5xSo66kgRw2LDkxIdnyffY5hNmTnC/6J992Z2zIi+w==
   dependencies:
     http-status-codes "2.3.0"
 
